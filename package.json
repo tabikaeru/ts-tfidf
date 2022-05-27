@@ -2,13 +2,13 @@
   "name": "ts-tfidf",
   "version": "0.0.1",
   "description": "",
-  "main": "dist/ts-tfidf.umd.ts",
-  "module": "dist/ts-tfidf.es.ts",
-  "types": "dist/ts-tfidf.d.ts",
+  "main": "./lib/ts-tfidf.umd.js",
+  "module": "./lib/ts-tfidf.es.js",
+  "types": "./types/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/ts-tfidf.es.ts",
-      "require": "./dist/ts-tfidf.umd.ts"
+      "import": "./lib/ts-tfidf.es.ts",
+      "require": "./lib/ts-tfidf.umd.ts"
     }
   },
   "scripts": {
@@ -31,7 +31,7 @@
     "url": "git+https://github.com/tabikaeru/ts-tfidf"
   },
   "files": [
-    "/dist",
+    "/lib",
     "/types"  
   ],
   "devDependencies": {

@@ -17,5 +17,5 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true
   },
-  "include": ["./lib"]
+  "include": ["./src"]
 }

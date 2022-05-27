@@ -4,9 +4,10 @@ import { defineConfig } from 'vitest/config'
 module.exports = defineConfig({
   build: {
     lib: {
-      entry: path.resolve(__dirname, "lib/index.ts"),
+      entry: path.resolve(__dirname, "src/index.ts"),
       name: "ts-tfidf",
-      fileName: (format) => `ts-tfidf.${format}.ts`,
+      fileName: (format) => `ts-tfidf.${format}.js`,
     },
+    outDir: path.resolve(__dirname, "lib"),
   },
 });
