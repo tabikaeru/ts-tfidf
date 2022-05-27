@@ -1,6 +1,6 @@
 {
   "name": "ts-tfidf",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "./lib/ts-tfidf.umd.js",
   "module": "./lib/ts-tfidf.es.js",
