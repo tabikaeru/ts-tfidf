@@ -1,0 +1,42 @@
+name: CICD
+
+# Triggers when pushed to main branch
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - '!*'
+permissions:
+  id-token: write
+  contents: read
+  actions: read
+
+jobs:
+  release:
+    name: release-npm-package
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: setup-node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+          registry-url: 'https://registry.npmjs.org'
+
+      # Get current package version
+      - name: current-package-version
+        run: node -p -e '`CURRENT_PACKAGE_VERSION=${require("./package.json").version}`' >> $GITHUB_ENV
+
+      - name: module install
+        run: npm install
+
+      - name: package build
+        run: npm run build
+
+      # Publish to npm
+      - name: publish-to-npm
+        run: npm publish --access=public 
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
