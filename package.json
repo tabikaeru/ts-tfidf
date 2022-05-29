@@ -53,6 +53,11 @@
     "vitest": "^0.9.0"
   },
   "license": "MIT",
+  "keywords": [
+    "natural language processing",
+    "artifical intelligence",
+    "tf-idf"
+  ],
   "volta": {
     "node": "16.14.2",
     "yarn": "1.22.10"
