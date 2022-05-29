@@ -1,6 +1,6 @@
 {
   "name": "ts-tfidf",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "main": "./lib/ts-tfidf.umd.js",
   "module": "./lib/ts-tfidf.es.js",
@@ -53,6 +53,11 @@
     "vitest": "^0.9.0"
   },
   "license": "MIT",
+  "keywords": [
+    "natural language processing",
+    "artifical intelligence",
+    "tf-idf"
+  ],
   "volta": {
     "node": "16.14.2",
     "yarn": "1.22.10"
